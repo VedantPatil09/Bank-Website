@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta char set="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initital-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<style >
+	body{
+      background-color: #f2f6ff ;
+      margin: 0;
+      padding: 16px;
+    }
+    form{
+      text-align: center;
+      background-color: white;
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      border:1px solid #ccc ;
+    }
+	#header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 80px;
+		background-color: #E3E6F3;
+		box-shadow: 0 5px 15px;
+		z-index: 999;
+		position: sticky;
+		top: 0;
+		left: 0;
+	}
+
+	#navbar{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#navbar li{
+		list-style:none;
+		padding: 0 20px;
+		positon: relative;
+	} 
+
+	#navbar li a{
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 600;
+		color: #1a1a1a;
+		transition: 0.3s ease;
+	}
+
+	#navbar li a:hover,
+	#navbar li a.active{
+		color:#088178;
+	}
+
+	 #navbar li a.active::after,
+	#navbar li a:hover::after{
+		content: "";
+		width: 30%;
+		height: 2px;
+		background: #088178;
+		postion: absolute;
+		bottom: -4px;
+		left: 20px;
+	} 
+
+	#hero{
+		background-image: url("F:/YouTube/MINECRAFT/Download images/pngaaa.com-3178788.png");
+		height: 90vh;
+		width: 100%;
+		background-size: cover;
+		background-position: top 25% 0;
+		padding: 0 80px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	#hero h4{
+		padding-bottom: 15px;
+	}
+
+	#hero h1{
+		color: #088178
+	}
+
+	#hero button {
+		background-image: url("E:/8001009997.jpg");
+		background-color: transparent;
+		color: #088178;
+		border: 0;
+		padding: 14px 80px 14px 65px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		font-weight: 700;
+		font-size: 15px;
+	}
+
+	#main-section{
+      padding: 24px;
+      text-align: center;
+      background-color: lightslategray;
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      border:1px solid #ccc ;
+    }
+
+	.section-p1{
+		padding: 40px 80px;
+	}
+
+	#feature{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+		
+	#feature .fe-box{
+		width: 180px;
+		text-align: center;
+		padding: 25px 15px;	
+		box-shadow: 5px 5px 20px;
+		border: 2px solid black;
+		border-radius: 4px;
+		margin: 15px 0;
+	}
+
+	#feature .fe-box:hover{
+		box-shadow: 2px 2px 54px;
+	}
+
+	#feature .fe-box img{
+		width: 100%;
+		marin-bottom: 10px;
+	} 
+
+	#feature .fe-box h3{
+		display: inline-block;
+		padding: 9px 8px 6px 8px;
+		line-height: 1;
+		border-radius: 4px;
+		background-color: #fddde4;
+	}
+
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	footer .col {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 20px;
+	}
+
+
+	footer.logo{
+		margin-bottom:30px;
+	}
+
+	footer h4{
+		font-size: 14px;
+		padding-bottom: 20px;
+	}
+
+	footer p{
+		font-size: 13px;
+		margin: 0 0 8px 0;
+	}
+
+	footer a{
+		font-size: 13px;
+		text-decoration: none;
+		color:#222;
+		margin-bottom: 10px;
+	}
+
+	footer .follow i{
+		color: #465b52;
+		padding-right: 4px;
+		cursor: pointer;
+	}
+
+	footer .install .row img{
+		border: 1px solid #088178;
+		border-radius: 6px;
+	}
+
+	footer .install img{
+		margin: 10px 0 15px 0;
+	}
+
+	footer h4{
+		font-size: 14px;
+		padding-bottom: 20px;
+	}
+
+	footer .follow i:hover,
+	footer a:hover{
+		color: #088178;
+	}
+
+	footer .copyright{
+		width: 100%;
+		text-align: center;
+	}
+</style>
+
+<body>
+	<form>
+	<main id = "main-section">
+	<section id="header">
+		<a href="#"><img src="bank.png" class="logo" alt=""></a>
+		
+		<div>
+			<ul id="navbar">
+				<li><a class="active" href="Main.html">Home</a></li>
+				<li><a href="terms.html">Terms And Conditions</a></li>
+				<li><a href="Account Creation.html">Create Account</a></li>
+			</ul>
+		</div>
+	</section>
+	<h1>Facilities</h1>
+	
+	<section id="feature" class="section-p1">
+		<div class ="fe-box">
+			<img src="loan.png" alt="">
+			<h3> Loan </h3>
+		</div>
+		<div class ="fe-box">
+			<img src="secure.png" alt="">
+			<h3> Secure</h3>
+		</div>
+		<div class ="fe-box">
+			<img src="account.png" alt="">
+			<h3>Account </h3>
+		</div>
+		<div class ="fe-box">
+			<img src="Time.png" alt="">
+			<h3>24/7 Available</h3>
+		</div>
+
+		<div class ="fe-box">
+			<img src="deposit.png" alt="">
+			<h3>Deposit</h3>
+		</div>
+
+		<div class ="fe-box">
+			<img src="Online.png" alt="">
+			<h3>Online Transaction</h3>
+		</div>
+	
+	</section>
+	
+	<footer class="section-p1">
+			<div class="col">
+				<img class="logo" src="" alt="">
+				<h4>Contact</h4>
+				<p><strong>Address:</strong> xyz nagar, xyz road, xyzpur</p>
+				<p><strong>Phone:</strong> 1234567890</p>
+				<p><strong>Main Office Timings:</strong> 10:00 18:00, Mon Sat</p>
+				<div class="follow">
+					<h4>Follow Us</h4>
+					<div class="icon">
+						<i class="fab fa-facebook-f"></i>
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-youtube"></i>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col">
+				<h4>About</h4>
+				<a href="#">About Us</a>
+				<a href="#">Our Reviews</a>
+				<a href="#">History Of Bank</a>
+				<a href="#">Our Branches</a>
+			</div>
+			
+			<div class="col">
+				<h4>My Account</h4>
+				<a href="#">Sign In</a>
+				<a href="#">Change Password</a>
+				<a href="#">Delete Account</a>
+			</div>
+		
+			
+			</div>
+			
+			<div class="copyright">
+				<p>@ 2021, XYZ etc - Dummy Website</p>
+			</div>
+		
+		</footer>
+		
+	<script src="script.js"></script>
+</main>
+</form>
+</body>
+
+</html>

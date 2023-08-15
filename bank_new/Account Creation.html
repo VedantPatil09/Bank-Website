@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bank of TVS</title>
+  <style>
+    body{
+      background-color: #f2f6ff ;
+      margin: 0;
+      padding: 16px;
+    }
+    form{
+      text-align: center;
+      background-color: white;
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      border:1px solid #ccc ;
+    }
+    #main-section{
+      padding: 24px;
+      text-align: center;
+      background-color: lightslategray;
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      border:1px solid #ccc ;
+    }
+    #form-heading{
+      font-size: 32px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    #header{
+      background-color: lightblue;
+      padding: 16px;
+    }
+    #navbar{
+      background-color: lightslategray;
+      padding:10px;
+      padding-right:24px ;
+      padding-left: 24px;
+    }
+    #image{
+      width: 200px; 
+      height: 200px;
+      padding-top: 4px;
+      padding-bottom: 32px;
+      padding-left: 32px;
+      padding-right: 32px;}
+    #social-wrapper{
+      background-color: #f0ffff;
+      padding: 40px;
+    }
+    .input-box{
+      text-size-adjust: 16px;
+      font-size: 20px;
+      padding-bottom: 12px;
+      margin-bottom: 25px;
+      width: 50%;
+      border: 1px solid #ccc;
+      background-color: #d1d1d1
+    }
+  </style>
+</head>
+<body>
+  <main id = "main-section">
+    <form>
+    <header id = "header">
+      <navbar id = "navbar"><a  style="color: Black;" href = "home.html">Home</a> > <a style="color: Black;" href = "Account Creation.html">Create Account </a> > <a style="color: Black;" href = "personal.html"><i>Personal Information<i> </a></navbar>
+      <h1 id = "form-heading">TVS Bank of India </h1>
+      <img id = "image" src="bank.png">
+      </img>
+    </header>
+
+    <div id = "social-wrapper">
+        <input class = "input-box" type="text" id="AadharNumber" placeholder="Aadhar Number" maxlength="12">
+    
+        <input class = "input-box" type="text" id = "FullName" placeholder = "Full Name" required>
+       
+        <input class = "input-box" type="text" id = "FathersName" placeholder = "Fathers Name" required>
+
+        <input class = "input-box" type="text" id = "MothersName" placeholder = "Mothers Name" required>
+
+        <select class = "input-box" name="gender" id="gender" >
+          <option value="" disabled selected>Select Gender</option> 
+          <option value="male">Male</option> 
+          <option value="female">Female</option> 
+          <option value="other">Other</option> 
+        </select>
+
+        <input class = "input-box" type="date" id="DOB" required>
+   
+        <input class = "input-box" type="number" id = "MobileNumber" pattern="[0-9]{10}" required placeholder="Mobile Number">
+
+        <input class = "input-box" type="text" id = "Address" required placeholder="Full Address">
+   
+        <input class = "input-box" type = "text" id="email" required placeholder="EmailID">
+
+        <input class = "input-box"  type = "text" id="pannumber" required placeholder="Pancard" maxlength=10>
+
+        <input class = "input-box" type = "text" id="Country" required placeholder="India">
+
+        <input class = "input-box" type = "text" id="State" required placeholder="State">
+
+        <input class = "input-box" type = "text" id="District" required placeholder="District">
+        <p></p>
+        <input  type="button" value="Submit" onclick="saveToCSV()">
+    </form>
+  </div>
+<div>
+  <details>
+    <summary>Show Guidelines about Banks in India</summary>
+    <p><ul>
+      <li><b>Licensing and Regulation:</b> Banks in India must obtain a license from the RBI to operate as a banking institution. The RBI regulates and supervises banks to maintain financial stability and prevent fraudulent activities.</li>
+
+      <li><b>Capital Adequacy:</b> Banks are required to maintain a minimum level of capital adequacy to ensure their ability to absorb potential losses. The RBI has set specific capital adequacy ratios and guidelines that banks must adhere to.</li>
+      
+      <li><b>Know Your Customer (KYC):</b> Banks are obligated to follow strict KYC guidelines to verify the identity and address of their customers. These guidelines are in place to prevent money laundering, terrorist financing, and other illegal activities.</li>
+      
+      <li><b>Anti-Money Laundering (AML):</b> Banks are required to have robust systems and procedures in place to detect and prevent money laundering and other financial crimes. They must conduct customer due diligence, monitor transactions, and report suspicious activities to the relevant authorities.</li>
+      
+      <li><b>Reserve Requirements:</b> Banks are mandated to maintain a certain percentage of their deposits as reserves with the RBI. These reserve requirements ensure that banks have sufficient liquidity to meet their obligations and promote stability in the banking system.</li>
+      
+      <li><b>Interest Rates:</b> The RBI regulates the interest rates charged by banks on loans and paid on deposits. It provides guidelines on the maximum and minimum rates that banks can offer, depending on the type of product or service.</li>
+      
+      <li><b>Consumer Protection:</b> Banks are required to adhere to guidelines and regulations aimed at protecting consumers' rights and interests. This includes transparent disclosure of terms and conditions, fair treatment of customers, timely resolution of complaints, and measures to prevent mis-selling of financial products.</li>
+      
+      <li><b>Data Security and Privacy:</b> Banks are expected to maintain the confidentiality and security of customer data. They must comply with data protection laws and implement robust cybersecurity measures to safeguard customer information.</li>
+      
+      <li><b>Prompt Corrective Action (PCA):</b> The RBI has established a framework for prompt corrective action, which allows it to intervene and take corrective measures when a bank's financial health deteriorates. The PCA framework aims to protect depositors' interests and maintain the stability of the banking system.</li>
+      <a href="https://www.complybook.com/blog/banking-regulation-in-india" target="_blank">To know more about bank regulation.Click Here</a>
+    </ul></p>
+  </details>
+  </div>
+  </main>
+
+
+  <script>
+    function saveToCSV() {
+      var aadharCardNo = document.getElementById("AadharNumber").value;
+      var FullName = document.getElementById("FullName").value;
+      var FathersName = document.getElementById("FathersName").value;
+      var MothersName = document.getElementById("MothersName").value;
+      var gender = document.getElementById("gender").value;
+      var dob = document.getElementById("DOB").value;
+      var phoneNo = document.getElementById("MobileNumber").value;
+      var address = document.getElementById("Address").value;
+      var email = document.getElementById("email").value;
+      var panno = document.getElementById("pannumber").value;
+      var country = document.getElementById("Country").value;
+      var state = document.getElementById("State").value;
+      var district = document.getElementById("District").value;
+      
+      var csvContent = "data:text/csv;charset=utf-8," 
+        + "AadharNo,FullName,FathersName,MothersName,Gender,DOB,MobileNumber,Address,Email,PanNo,Country,State,District\n" 
+        + aadharCardNo + "," + FullName + "," + FathersName + "," + MothersName + "," + gender + "," + dob + "," + phoneNo+ ","+ address+ "," + email + "," + panno + "," + country + "," + state + "," + district;
+
+      var link = document.createElement("a");
+      link.setAttribute("href", encodeURI(csvContent));
+      link.setAttribute("download", "details.csv");
+      link.click();
+    }
+  </script>
+</body>
+</html>
